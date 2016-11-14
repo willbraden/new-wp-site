@@ -1,0 +1,1453 @@
+/*
+Theme Name: seanmdoyle
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: seanmdoyle
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+seanmdoyle is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul,
+ol {
+	margin: 0 0 1.5em 3em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb;
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: royalblue;
+}
+
+a:visited {
+	color: purple;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: midnightblue;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+
+
+/*w-custom*/
+body {
+	font-size: 16px;
+}
+.textcenter {
+	text-align: center;
+	width: 100%;
+	display: table;
+}
+.scroll-bg {
+	height: 100vh;
+	background-attachment: fixed;
+	background-size: cover;
+	    background-position: center center;
+	    position: relative;
+	      	    z-index: 0;
+}
+.scroll-bg__center-box {
+	display: inline-block;
+	display: table-cell;
+	text-align: center;
+    vertical-align: middle;
+  	max-width: 900px;
+  	    padding: 0 10%;
+  	    z-index: 2;
+  	    position: relative;
+}
+.scroll-bg__header,
+.scroll-bg__subtext {
+	color: #fff;
+	text-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+
+h2.scroll-bg__header {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 6em;
+	    clear: both;
+	display: block;
+}
+p.scroll-bg__subtext {
+    font-size: 3em;
+    line-height: 1.2em;
+    margin: 25px 0;
+    clear: both;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    h2.scroll-bg__header {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 4em;
+	}
+	p.scroll-bg__subtext {
+		font-size: 2em;
+	}
+}
+@media screen and (max-width: 768px) {
+    h2.scroll-bg__header {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 3em;
+	}
+	p.scroll-bg__subtext {
+		font-size: 1em;
+	}
+}
+
+ 
+
+
+/*HOME HERO*/
+.home-hero.scroll-bg {
+	background-attachment: initial;
+}
+.home-hero .scroll-bg__center-box {
+	display: inline-block;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	max-width: 900px;
+	padding: 0 10%;
+	text-align: left;
+}
+.home-hero .scroll-bg__header,
+.home-hero .scroll-bg__subtext {
+	color: #fff;
+	text-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+
+.home-hero .scroll-bg__placement-box {
+	width: 50%;
+	float: right;
+}
+
+.home-hero h2.scroll-bg__header {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	font-size: 4em;
+	display: block;
+	max-width: 500px;
+	float: none;
+}
+.home-hero p.scroll-bg__subtext {
+	font-size: 1em;
+	line-height: 1.2em;
+	display: block;
+	clear: right;
+	max-width: 500px;
+	float: none;
+}
+
+
+@media (max-width: 992px) {
+    .home-hero h2.scroll-bg__header {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 3em;
+	}
+	.home-hero p.scroll-bg__subtext {
+		font-size: 2em;
+	}
+}
+@media screen and (max-width: 768px) {
+    .home-hero h2.scroll-bg__header {
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 700;
+		font-size: 3em;
+		width: 100%;
+		float: none;
+	}
+	.home-hero p.scroll-bg__subtext {
+		font-size: 1em;
+		width: 100%;
+		float: none;
+	}
+	.home-hero .scroll-bg {
+		
+	}
+	.scroll-bg {
+		background-position: 40% 100%;
+		background-size: auto 110%;
+		background-repeat: no-repeat;
+	}
+	.home-hero .scroll-bg__placement-box {
+	width: 100%;
+	float: none;
+	position: absolute;
+	bottom: 35px;
+}
+.home-hero .scroll-bg__center-box {
+	padding: 0;
+}
+}
+@media screen and (max-width: 500px) {
+	.home-hero h2.scroll-bg__header {
+		font-size: 2em; }
+}
+
+.dimmer
+{
+			height:100%;
+			width:100%;
+			position:absolute;
+			left:0;
+			top:0;
+			z-index:1 !important;
+			background-color:rgba(3, 14, 69, 0.51);
+}
+
+ .scroll-bg--50{
+	height: 50vh;
+}
+
+
+/*wCustom*/
+
+.site-title {
+	font-size: 1em;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+.site-branding {
+	margin-top: 10px;
+	float: left;
+}
+.row {
+	max-width: 100%;
+}
+#masthead {
+	position: fixed;
+	width: 100%;
+	background-color: #fff;
+	/*background-image: url('http://seanmdoyle.com/wp-content/uploads/2016/11/tie.jpg');*/
+	/*background-repeat: repeat-x;*/
+	transition:all 0.2s ease;
+	z-index: 4;
+}
+#masthead a {
+	color: #000;
+	/*text-shadow: 0px 1px 3px rgba(0,0,0,0.5);*/
+	transition: all .2s;
+	/*border-radius: 3px;*/
+	outline: none;
+	text-decoration: none;
+}
+/*#masthead a:hover {
+	background-color: #fff; 
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	text-shadow: none;
+	}*/
+.nav-color {
+	background-color: #fff ;
+}
+
+#masthead li:nth-child(1) a:hover {
+	background-color: #1abc9c;
+	color:#fff;
+}
+#masthead li:nth-child(2) a:hover {
+	background-color: #f1c40f;
+	color:#333;
+}
+#masthead li:nth-child(3) a:hover {
+	background-color: #9b59b6;
+	color:#fff;
+}
+#masthead li:nth-child(4) a:hover {
+	background-color: #0099cc;
+	color:#fff;
+}
+#masthead li:nth-child(5) a:hover {
+	background-color: #1abc9c;
+	color:#fff;
+}
+.nav-text a{
+		color:#fff ;
+	/*text-shadow: 0px 1px 3px rgba(0,0,0,0.5);*/
+}
+.main-navigation {
+	clear: none;
+	display: block;
+	float: right;
+	width: auto;
+}
+
+
+/*BIO CARD*/
+.bio-card {
+	max-width: 750px;
+	margin: 0 auto;
+	box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+	background-color: #f1f1f1;
+	/* overflow: hidden; */
+	margin-top: 150px;
+	margin-bottom: 150px;
+	height: 220px;
+	border-radius: 4px;
+	z-index: 3;
+	position: relative;
+}
+.bio-card__copy {
+	/*width: 50%;*/
+	float: left;
+	padding:  0 35px 35px 35px;
+}
+.bio-card__img {
+	box-shadow: 0px 3px 7px rgba(0,0,0,0.2);
+	/*width: 50%;*/
+	float: left;
+	width: 250px;
+	padding: 0;
+	margin-left: 60px;
+	margin-top: -100px;
+	box-shadow: 5px 7px 10px 0px rgba(0,0,0,0.3);
+	border-radius: 2px;
+}
+.bio-card__header {
+
+}
+.bio-card__text {
+
+}
+
+/*BIO CARD TWEAKS*/
+
+@media (max-width: 992px) {
+	.bio-card {
+		max-width: 750px;
+		margin-top: -100px;
+		height: 220px;
+		border-radius: 4px;
+	}
+	.bio-card__copy {
+		padding:  0 35px 35px 35px;
+	}
+	.bio-card__img {
+		width: 250px;
+		margin-top: -100px;
+	}
+	.bio-card__header {
+
+	}
+	.bio-card__text {
+
+	}
+}
+@media screen and (max-width: 768px) {
+	.bio-card {
+		max-width: 750px;
+		margin-top: 0px;
+		height: auto;
+		border-radius: 4px;
+		margin-bottom: 100px;
+		overflow: hidden;
+		padding-bottom: 25px;
+		padding: 25px;
+		background-color:transparent;
+		box-shadow: none;
+		border-bottom: 1px solid #333;
+		border-radius: 0;
+	}
+	.bio-card__copy {
+		padding:  0 35px 35px 35px;
+		width: 75%;
+	}
+	.bio-card__img {
+		width: 25%;
+		max-width: 150px;
+		margin-left: 0px;
+		margin-top: 0px;
+	}
+	.bio-card__header {
+
+	}
+	.bio-card__text {
+
+	}
+}
+@media screen and (max-width: 500px) {
+	.bio-card {
+		text-align: center; 
+	}
+	.bio-card__copy {
+		width: 100%;
+	}
+	.bio-card__img {
+		width:100%;
+		max-width: 150px;
+	    margin-left: 0px;
+	    margin-top: 0px;
+	    margin: 0 auto;
+	    display: inline-block;
+	    float: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+ul#primary-menu li a {
+	padding:10px 15px;
+}
+.site-title {
+	margin:0 !important;
+}
+.site-title a {
+	margin:0;
+	padding: 15px;
+}
+
+.site-info {
+	text-align: center;
+}
+/*#site-navigation {
+	position: absolute;
+	right: 0;
+	width: auto;
+}
+
+.site-branding {
+	width: 300px;
+	position: absolute;
+	left: 0;
+}
+
+*/
+.marneg100 {
+	margin-top: -100px;
+}
+
+
+.ltbltwhbg {
+	background: #d0e9ee;
+	background: -moz-linear-gradient(-45deg,  #d0e9ee 0%, #ffffff 100%);
+	background: -webkit-linear-gradient(-45deg,  #d0e9ee 0%,#ffffff 100%);
+	background: linear-gradient(135deg,  #d0e9ee 0%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e9ee', endColorstr='#ffffff',GradientType=1 );
+}
+
+
+
+.greenglow {
+	background: #009361;
+background: -moz-linear-gradient(-45deg,  #009361 0%, #00dd55 100%);
+background: -webkit-linear-gradient(-45deg,  #009361 0%,#00dd55 100%);
+background: linear-gradient(135deg,  #009361 0%,#00dd55 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009361', endColorstr='#00dd55',GradientType=1 );
+border-radius: 15px;
+color: #fff;
+max-width: 400px;
+}
+.gg-shadow {
+	border-radius: 15px;
+	box-shadow: 0px 35px 50px -25px rgba(0, 255, 43, 0.87);
+	    max-width: 900px;max-width: 400px;
+    margin: 0 auto;
+}
+
+a.button {
+	border-radius: 99px;
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-decoration: none;
+	background-color: #333;
+	color: #fff;
+	font-size: 13px;
+	letter-spacing: 1px;
+	outline: none;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.5);
+	transition: all .2s ease;
+}
+a.button:hover {
+	    box-shadow: 0 8px 16px -6px rgba(0,0,0,0.5);
+}
+
+a.button--orange:hover{
+	background-color: #f8933a;
+}
+a.button--orange,
+a.button--orange:active {
+	background-color: #e67e22;
+}
+a.button--lt-grey:hover{
+	background-color: #fff;
+}
+a.button--lt-grey,
+a.button--lt-grey:active {
+	background-color: #f3f3f3;
+	color: #333;
+}
+.talk {
+	position: fixed;
+	z-index: 4;
+	bottom: 25px;
+	right: 25px;
+}
+.talk i {
+	padding-right: 10px;
+	margin-right: 10px;
+	border-right: 1px solid #9b9b9b;
+}
+a.talk-button {
+	background-color: #FFFFFF;
+    border-radius: 21px;
+    border: 1px solid #9b9b9b;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: normal;
+	padding: 10px 15px 12px 21px;
+	text-decoration: none;
+	color: #0481BF;
+	outline: 0;
+} 
+.talk-pop label {
+	display: none !important;
+}
+.talk-pop {
+	display: none;
+	width: 100%;
+	max-width: 300px;
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	transform: translate(-100%, -100%,);
+	background-color: #fff;
+	/*border: 1px solid #9b9b9b;*/
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+	z-index: 4;
+	text-align: center;
+}
+.talk-exit {
+	cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+}
+
+img.sean-circle {
+	    max-width: 70px;
+    margin: 0 auto;
+    display: inherit;
+    border: 2px solid #0481BF;
+    border-radius: 99px;
+    box-shadow: inset 0 0 72px rgba(0,0,0,1);
+}
+
+
+/*FORMS*/
+.gform_wrapper form {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.enhanced-text {
+	font-size: 3.5em;
+	font-family: 'Georgia', sans-serif;
+	text-align: center;
+}
+.site-info {
+    text-align: center;
+    bottom: 25px;
+    position: relative;
+    margin-bottom: -25px;
+    z-index: 4;
+    color: #fff;
+}
+
+
+.entry-content {
+	font-family: 'Georgia', serif;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+.entry-content p {
+	max-width: 750px;
+	margin: 0 auto 25px;
+}
