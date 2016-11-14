@@ -4,7 +4,7 @@ Template Name:Front Page
 */
 
 get_header(); ?>
-<div class="scroll-bg textcenter home-hero" style="background-image: url('http://seanmdoyle.com/wp-content/uploads/2016/11/sean_v2.jpg <?php // the_field('scroll_bg_image'); ?> ');"> 
+<div class="scroll-bg textcenter home-hero" style="background-image: url('http://blankcanvas.com/wp-content/uploads/2016/11/sean_v2.jpg <?php // the_field('scroll_bg_image'); ?> ');"> 
 	<div class="scroll-bg__center-box">
 		<div class="scroll-bg__placement-box">
 			<h2 class="scroll-bg__header">Aliena dixit in physicis nec ea ipsa</h2>
@@ -12,7 +12,7 @@ get_header(); ?>
 		</div>
 	</div>
 </div>
-<div class="" style="padding:25px 0;background-image: url('http://seanmdoyle.com/wp-content/uploads/2016/11/cheap_diagonal_fabric.png');">
+<div class="" style="padding:25px 0;background-image: url('http://blankcanvas.com/wp-content/uploads/2016/11/cheap_diagonal_fabric.png');">
 	
 	<div class="bio-card">
 		<?php 

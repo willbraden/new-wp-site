@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package seanmdoyle
+ * @package blankcanvas
  */
 
 ?>
@@ -20,7 +20,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'seanmdoyle' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'blankcanvas' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -33,7 +33,7 @@
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'seanmdoyle' ),
+						esc_html__( 'Edit %s', 'blankcanvas' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
 					'<span class="edit-link">',

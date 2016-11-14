@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package seanmdoyle
+ * @package blankcanvas
  */
 
 ?>
@@ -19,7 +19,7 @@
 	</div>
 	<div class="talk-pop">
 		<i class="fa fa-chevron-down talk-exit"></i>
-		<img class="sean-circle" src="http://seanmdoyle.com/wp-content/uploads/2016/11/sean-circle.png" alt="">
+		<img class="sean-circle" src="http://blankcanvas.com/wp-content/uploads/2016/11/sean-circle.png" alt="">
 		<?php the_field('talk_form_copy', 'option'); ?>
 		<?php gravity_form(1, false, false, false, '',true); ?>
 	</div>
@@ -29,7 +29,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			&copy; <?php echo date('Y'); ?> seanmdoyle.com
+			&copy; <?php echo date('Y'); ?> blankcanvas.com
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

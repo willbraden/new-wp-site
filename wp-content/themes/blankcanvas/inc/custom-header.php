@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package seanmdoyle
+ * @package blankcanvas
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses seanmdoyle_header_style()
+ * @uses blankcanvas_header_style()
  */
-function seanmdoyle_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'seanmdoyle_custom_header_args', array(
+function blankcanvas_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'blankcanvas_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'seanmdoyle_header_style',
+		'wp-head-callback'       => 'blankcanvas_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'seanmdoyle_custom_header_setup' );
+add_action( 'after_setup_theme', 'blankcanvas_custom_header_setup' );
 
-if ( ! function_exists( 'seanmdoyle_header_style' ) ) :
+if ( ! function_exists( 'blankcanvas_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see seanmdoyle_custom_header_setup().
+ * @see blankcanvas_custom_header_setup().
  */
-function seanmdoyle_header_style() {
+function blankcanvas_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

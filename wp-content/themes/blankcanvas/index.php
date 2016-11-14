@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package seanmdoyle
+ * @package blankcanvas
  */
 
 get_header(); ?>
