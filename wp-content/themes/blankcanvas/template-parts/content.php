@@ -9,22 +9,38 @@
 
 ?>
 
+
+ <div class="scroll-bg scroll-bg--center textcenter scroll-bg__textshadow" style="	height:75vh;
+						background-color:#333;
+						color:#fff;
+						background-image: url('<?php 
+								if ( has_post_thumbnail() ) {
+							    $url = the_post_thumbnail_url(); echo $url;};
+							 ?>');">
+
+
+                <div class="dimmer" style=" background-color: #000; opacity:0.15;"></div>
+
+                <div class="scroll-bg__center-box">
+                    <div class="scroll-bg__placement-box">
+                        <h1 class="scroll-bg__header">
+						<?php the_title(); ?>
+					</h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php blankcanvas_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
 	</header><!-- .entry-header -->
+
+
 
 	<div class="entry-content">
 		<?php
@@ -34,14 +50,8 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'blankcanvas' ),
-				'after'  => '</div>',
-			) );
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php blankcanvas_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+
 </article><!-- #post-## -->

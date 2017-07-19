@@ -181,3 +181,122 @@ if( function_exists('acf_add_options_page') ) {
 	// ));
 	
 }
+
+add_action('acf/input/admin_head', 'my_acf_admin_head');
+function my_acf_admin_head() {
+	?>
+	<style type="text/css">
+
+		/* ... */
+
+	</style>
+
+	<script type="text/javascript">
+
+
+jQuery( document ).ready(function() {
+		
+		jQuery('.wLabel input').each(function() { 
+			var valu = jQuery(this).val();
+			var valu = '<span style="color:#333;background:#ddd;padding:3px 10px;margin-left:15px;margin-bottom:10px;margin-top:10px;border-radius:3px;font-size:10px;display:inline-block;box-shadow:inset 1px 1px 2px rgba(0,0,0,0.2);">Label: ' + valu + '</span>';
+				jQuery(this).parents('.layout').prepend(valu) ;
+				// console.log(valu);
+			});
+
+		jQuery()
+
+});
+
+	</script>
+	<?php
+}
+
+
+// Google Map API for ACF 
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyDWeya3PCuN4uz4dCkGfjrH1cVdGApEG18');
+}
+
+add_action('acf/init', 'my_acf_init');
+
+
+
+add_image_size( 'custom-size', 300, 150, true ); // Hard crop left top
+
+
+
+
+// TinyMCE styles
+// Callback function to insert 'styleselect' into the $buttons array
+function my_mce_buttons_2( $buttons ) {
+	array_unshift( $buttons, 'styleselect' );
+	return $buttons;
+}
+// Register our callback to the appropriate filter
+add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
+
+// Callback function to filter the MCE settings
+function my_mce_before_init_insert_formats( $init_array ) {  
+	// Define the style_formats array
+	$style_formats = array(  
+		// Each array child is a format with it's own settings
+		array(  
+			'title' => 'Button',
+			'selector' => 'a', 
+			'classes' => 'button',
+			'wrapper' => false,
+			
+		), 
+		array(  
+			'title' => 'Button Small',
+			'selector' => 'a', 
+			'classes' => 'button--small',
+			'wrapper' => false,
+			
+		), 
+		array(  
+			'title' => 'Button Light Grey',
+			'selector' => 'a', 
+			'classes' => 'button--lt-grey',
+			'wrapper' => false,
+			
+		), 
+		array(  
+			'title' => 'Button Red',
+			'selector' => 'a', 
+			'classes' => 'button--lt-red',
+			'wrapper' => false,
+			
+		), 
+		array(  
+			'title' => 'Hilight Copy',
+			'selector' => 'p', 
+			'classes' => 'hilight-copy',
+			'wrapper' => false,
+			
+		), 
+		array(  
+			'title' => 'Hilight Copy Grey BG',
+			'selector' => 'p', 
+			'classes' => 'hilight-copy hilight-copy--grey-bg',
+			'wrapper' => false,
+			
+		), 
+
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );  
+	
+	return $init_array;  
+  
+} 
+// Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  
+
+
+
+// create an SEO friendly string
+
+
+

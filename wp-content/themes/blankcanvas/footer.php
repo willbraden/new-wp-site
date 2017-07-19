@@ -12,29 +12,27 @@
 ?>
 
 	</div><!-- #content -->
-<?php if (get_field('talk_form_toggle', 'option')) { ?>
-
-	<div class="button talk">
-		<a class="talk-button" href="#0"><i class="fa fa-comment-o"></i>Talk</a>
-	</div>
-	<div class="talk-pop">
-		<i class="fa fa-chevron-down talk-exit"></i>
-		<img class="sean-circle" src="http://blankcanvas.com/wp-content/uploads/2016/11/sean-circle.png" alt="">
-		<?php the_field('talk_form_copy', 'option'); ?>
-		<?php gravity_form(1, false, false, false, '',true); ?>
-	</div>
-
-<?php } ?>
-
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			&copy; <?php echo date('Y'); ?> blankcanvas.com
+			 &copy; <?php echo date('Y'); ?> uwa.edu 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+
+
+<!-- <script src="//code.jquery.com/jquery-2.1.4.min.js"></script> -->
+<!-- <script src="<?php echo site_url(); ?>/wp-content/themes/blankcanvas/js/unslider-master/dist/js/unslider-min.js"></script> -->
+
+<script>
+		jQuery(document).ready(function($) {
+			var slider = $('.slider').unslider({ autoplay: true, delay: 5000, animation: 'fade' });
+
+		});
+
+	</script>
 
 </body>
 </html>
